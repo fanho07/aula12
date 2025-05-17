@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Layout Simples com React</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    header, main, footer {
+      margin-bottom: 20px;
+    }
+    header h1 {
+      color: #2c3e50;
+    }
+    footer {
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function Cabecalho() {
+      return <h1>Meu Site React</h1>;
+    }
+
+    function ConteudoPrincipal() {
+      return (
+        <main>
+          <p>Este é o parágrafo 1 do conteúdo principal.</p>
+          <p>Aqui está o parágrafo 2 com mais informações.</p>
+          <p>E este é o parágrafo 3 para completar o texto.</p>
+        </main>
+      );
+    }
+
+    function Rodape() {
+      return (
+        <footer>
+          © 2025 Meu Site React. Todos os direitos reservados.
+        </footer>
+      );
+    }
+
+    function App() {
+      return (
+        <>
+          <Cabecalho />
+          <ConteudoPrincipal />
+          <Rodape />
+        </>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>

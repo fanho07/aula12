@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Componente React Corrigido</title>
+  <!-- React e Babel CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    .texto-destaque {
+      color: darkblue;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function ComponenteComErros() {
+      return (
+        <div>
+          <p className="texto-destaque">
+            Olá, Mundo!<br />
+            <img src="https://via.placeholder.com/150" alt="Imagem" />
+            <label htmlFor="email">E-mail:</label>
+            <input type="email" id="email" />
+          </p>
+          <p>Outro parágrafo</p>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<ComponenteComErros />, document.getElementById('root'));
+  </script>
+</body>
+</html>

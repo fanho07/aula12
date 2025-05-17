@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Calculadora React</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f8ff;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    p {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #34495e;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function Calculadora() {
+      const num1 = 10;
+      const num2 = 5;
+
+      return (
+        <div>
+          <h2>Mini Calculadora</h2>
+          <p>{num1} + {num2} = {num1 + num2}</p>
+          <p>{num1} - {num2} = {num1 - num2}</p>
+          <p>{num1} * {num2} = {num1 * num2}</p>
+          <p>{num1} / {num2} = {num1 / num2}</p>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <h1>Exemplo de Mini Calculadora</h1>
+          <Calculadora />
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>

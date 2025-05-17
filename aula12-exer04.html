@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cartão de Visita React</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .cartao {
+      background: white;
+      border: 1px solid #ccc;
+      padding: 15px 20px;
+      border-radius: 8px;
+      max-width: 300px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .cartao h2 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+    .cartao p {
+      margin: 5px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function CartaoVisita() {
+      const nome = "Ana Silva";
+      const cargo = "Desenvolvedora Frontend";
+      const email = "ana.silva@email.com";
+
+      return (
+        <div className="cartao">
+          <h2>{nome}</h2>
+          <p><strong>Cargo:</strong> {cargo}</p>
+          <p><strong>Email:</strong> {email}</p>
+        </div>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <h1>Meu Cartão de Visita</h1>
+          <CartaoVisita />
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
